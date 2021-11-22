@@ -46,25 +46,13 @@ export const SeacrhScreen = () => {
                             value={searchText}
                             onChange={handleInputChange}
                         />
-                        <button
-                            type="submit"
-                            className="btn m-1 btn-block btn-outline-primary"
-                        >
-                            Search...
-                        </button>
+               
                     </form>
                 </div>
                 <div className="col-7">
                     <h4> Results </h4>
                     <hr />
-                    {
-                        (q==='')&&
-                        <div className="alert alert-info">Search a movie</div>
-                    }
-                    {
-                        (q !== '' && moviesFiltered.length===0)
-                        && <div  className="alert alert-danger">There is no a movie with {q}</div>
-                    }
+               
                     {
                         moviesFiltered.map(movie => (
                             <MovieCard key={movie.id}
